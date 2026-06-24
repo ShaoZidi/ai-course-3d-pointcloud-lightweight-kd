@@ -1,9 +1,3 @@
-# 人工智能大作业说明
-
-本文件夹已整理为一个可提交的课程大作业包，主题为“基于轻量化网络与知识蒸馏的 3D 点云目标检测方法设计与分析”。
-
-项目代码开源地址：https://github.com/ShaoZidi/ai-course-3d-pointcloud-lightweight-kd
-
 ## 主要交付文件
 
 - report/course_report_submit_v3.pdf：建议提交的课程报告 PDF。
@@ -22,14 +16,8 @@
 
    python src/run_experiment.py
 
-2. 重新生成报告：
 
-   python report/build_report_pdf.py
-
-3. 运行测试：
+2. 运行测试：
 
    python -m unittest discover -s tests -v
 
-## 说明
-
-原论文完整实验依赖 KITTI/nuScenes、OpenPCDet、spconv 和多 GPU。本作业没有伪造这些大规模训练结果，而是受论文启发，采用小规模合成 3D 体素任务完成方案验证：基线模型、轻量化模型和知识蒸馏提升。
