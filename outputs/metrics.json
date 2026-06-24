@@ -1,0 +1,155 @@
+{
+  "task": "synthetic 3D voxel object classification and box regression",
+  "class_names": [
+    "car",
+    "pedestrian",
+    "cyclist"
+  ],
+  "grid_shape": [
+    8,
+    12,
+    12
+  ],
+  "models": {
+    "Baseline teacher": {
+      "stats": {
+        "parameters": 114089,
+        "ops_per_sample": 113952
+      },
+      "metrics": {
+        "accuracy": 0.8708333333333333,
+        "bbox_mae": 0.10200008749961853,
+        "mean_iou": 0.2011997550725937
+      },
+      "history": [
+        {
+          "accuracy": 0.4625,
+          "bbox_mae": 0.16569744050502777,
+          "mean_iou": 0.12906479835510254,
+          "epoch": 1,
+          "train_loss": 1.174121259185283
+        },
+        {
+          "accuracy": 0.7791666666666667,
+          "bbox_mae": 0.13946281373500824,
+          "mean_iou": 0.1412084996700287,
+          "epoch": 6,
+          "train_loss": 0.7051471795724786
+        },
+        {
+          "accuracy": 0.8458333333333333,
+          "bbox_mae": 0.12262452393770218,
+          "mean_iou": 0.16081812977790833,
+          "epoch": 12,
+          "train_loss": 0.31305011855843273
+        },
+        {
+          "accuracy": 0.8708333333333333,
+          "bbox_mae": 0.10999172925949097,
+          "mean_iou": 0.1813608556985855,
+          "epoch": 18,
+          "train_loss": 0.14878537169779124
+        },
+        {
+          "accuracy": 0.8708333333333333,
+          "bbox_mae": 0.10200008749961853,
+          "mean_iou": 0.2011997550725937,
+          "epoch": 24,
+          "train_loss": 0.08710824398566848
+        }
+      ]
+    },
+    "Lightweight student": {
+      "stats": {
+        "parameters": 8033,
+        "ops_per_sample": 7968
+      },
+      "metrics": {
+        "accuracy": 0.8375,
+        "bbox_mae": 0.13365334272384644,
+        "mean_iou": 0.11912383884191513
+      },
+      "history": [
+        {
+          "accuracy": 0.39166666666666666,
+          "bbox_mae": 0.18117065727710724,
+          "mean_iou": 0.1212005764245987,
+          "epoch": 1,
+          "train_loss": 1.2316860789838044
+        },
+        {
+          "accuracy": 0.6208333333333333,
+          "bbox_mae": 0.15587586164474487,
+          "mean_iou": 0.12919281423091888,
+          "epoch": 6,
+          "train_loss": 1.0158751747044532
+        },
+        {
+          "accuracy": 0.7375,
+          "bbox_mae": 0.1422383040189743,
+          "mean_iou": 0.1249399185180664,
+          "epoch": 12,
+          "train_loss": 0.756330646817451
+        },
+        {
+          "accuracy": 0.8375,
+          "bbox_mae": 0.13365334272384644,
+          "mean_iou": 0.11912383884191513,
+          "epoch": 18,
+          "train_loss": 0.5092755696209876
+        }
+      ]
+    },
+    "Lightweight + KD": {
+      "stats": {
+        "parameters": 8033,
+        "ops_per_sample": 7968
+      },
+      "metrics": {
+        "accuracy": 0.8958333333333334,
+        "bbox_mae": 0.12406529486179352,
+        "mean_iou": 0.11463174968957901
+      },
+      "history": [
+        {
+          "accuracy": 0.3875,
+          "bbox_mae": 0.18304243683815002,
+          "mean_iou": 0.12021677941083908,
+          "epoch": 1,
+          "train_loss": 1.5906392517815462
+        },
+        {
+          "accuracy": 0.7416666666666667,
+          "bbox_mae": 0.15207959711551666,
+          "mean_iou": 0.11455879360437393,
+          "epoch": 6,
+          "train_loss": 1.0048599799325608
+        },
+        {
+          "accuracy": 0.8708333333333333,
+          "bbox_mae": 0.13434885442256927,
+          "mean_iou": 0.10040754824876785,
+          "epoch": 12,
+          "train_loss": 0.4464847542875974
+        },
+        {
+          "accuracy": 0.8958333333333334,
+          "bbox_mae": 0.12406529486179352,
+          "mean_iou": 0.11463174968957901,
+          "epoch": 18,
+          "train_loss": 0.2745374425379155
+        }
+      ]
+    }
+  },
+  "paper_reference": {
+    "SECOND_KITTI_BEV_mAP": 63.3,
+    "LW_SECOND_3_KITTI_BEV_mAP": 48.7,
+    "LW_SECOND_3_KD_KITTI_BEV_mAP": 62.7,
+    "SECOND_FLOPs_G": 69.8,
+    "LW_SECOND_3_FLOPs_G": 18.5,
+    "SECOND_params_M": 5.34,
+    "LW_SECOND_3_params_M": 0.67
+  },
+  "qualitative_figure": "outputs\\qualitative_results.png"
+}

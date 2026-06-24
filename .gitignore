@@ -1,0 +1,22 @@
+# Python caches
+__pycache__/
+*.py[cod]
+
+# Temporary render outputs and local scratch files
+tmp/
+.agents/
+.codex/
+
+# Local generated variants / previews
+report/course_report.pdf
+report/course_report_final.pdf
+report/course_report_submit.pdf
+report/course_report_submit_v2.pdf
+
+# Original reference materials and assignment screenshot are not redistributed
+applsci-13-06754-with-cover.pdf
+*.jpg
+*.jpeg
+*.png
+!outputs/*.png
+!report/assets/*.png
